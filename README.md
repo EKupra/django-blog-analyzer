@@ -13,7 +13,7 @@ https://youtu.be/4VfoYLZEkbM
 ### 📊 Presentation
 View the detailed presentation about Boosty:
 
-[Boosty_Final.pdf](https://github.com/user-attachments/files/23832945/Boosty_Final.pdf)
+[Boosty.pdf](https://github.com/user-attachments/files/23833079/Boosty.pdf)
 
 
 ---
