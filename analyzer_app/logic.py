@@ -119,7 +119,7 @@ from sumy.summarizers.lsa import LsaSummarizer
 from sumy.nlp.stemmers import Stemmer
 from sumy.utils import get_stop_words
 
-def summarize_blog(url: str, sentence_count: int = 4) -> str:
+def summarize_blog(url: str, sentence_count: int = 6) -> str:
     """
     Summarizes the blog post content using LSA (Latent Semantic Analysis).
     Works on Mac ARM64 with open-source libraries only.
@@ -127,6 +127,11 @@ def summarize_blog(url: str, sentence_count: int = 4) -> str:
     try:
         LANGUAGE = "english"
         parser = HtmlParser.from_url(url, Tokenizer(LANGUAGE))
+        
+        # Check if document has content
+        if not parser.document or not parser.document.sentences:
+            return "Unable to extract sufficient content from this URL for summarization."
+        
         stemmer = Stemmer(LANGUAGE)
         summarizer = LsaSummarizer(stemmer)
         summarizer.stop_words = get_stop_words(LANGUAGE)
@@ -135,9 +140,18 @@ def summarize_blog(url: str, sentence_count: int = 4) -> str:
         for sentence in summarizer(parser.document, sentence_count):
             summary.append(str(sentence))
         
-        return " ".join(summary)
+        if not summary:
+            return "Unable to generate a meaningful summary from this content."
+        
+        result = " ".join(summary)
+        
+        # If summary is too short, return a helpful message
+        if len(result) < 50:
+            return "This blog post is very short or has limited extractable content."
+            
+        return result
     except Exception as e:
-        return f"Could not generate summary: {str(e)}"
+        return f"Summary generation unavailable. Please ensure the URL is accessible and contains readable text content."
 
 def check_grammar(text: str) -> Tuple[int, List[Dict]]:
     """
@@ -360,7 +374,12 @@ def analyze_page(html: str, url: str = "") -> Dict[str, Any]:
     grammar_score, grammar_issues = check_grammar(text)
     if grammar_issues:
         for issue in grammar_issues[:3]:  # Show top 3 grammar issues
-            content_issues.append({"priority": "MEDIUM", "title": "Grammar", "desc": issue['desc']})
+            content_issues.append({
+                "priority": "MEDIUM", 
+                "title": "Grammar & Style Issue", 
+                "desc": issue['desc'],
+                "ai_fix": f"Replace {issue.get('count', 1)} occurrence(s). Use Find & Replace in your editor to quickly fix all instances of this error."
+            })
     
     content_total = int((structure_score + readability_score + grammar_score) / 3)
 
@@ -407,11 +426,9 @@ def analyze_page(html: str, url: str = "") -> Dict[str, Any]:
     # --- Seasonal Content Check ---
     seasonal_data = check_seasonal_content(text)
     
-    all_recommendations = seo_issues + content_issues + visual_issues + [{"priority": "LOW", "title": "Social Growth", "desc": rec} for rec in social_recommendations]
+    all_recommendations = seo_issues + content_issues + visual_issues + [{"priority": "LOW", "title": "Social Growth", "desc": rec, "ai_fix": f"Add social sharing buttons for {rec.split()[1]} to your blog sidebar or footer."} for rec in social_recommendations]
     
-    # Add AI fix suggestions to each recommendation
-    for rec in all_recommendations:
-        rec['ai_fix'] = generate_fix_content(rec['title'], rec['desc'])
+    # AI fixes are already added to each recommendation above, no need to overwrite
 
     # --- 6. Additional Categories (UX, Engagement, Topic Fit) ---
     # Simulating scores for these advanced categories
