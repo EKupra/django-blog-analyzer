@@ -7,17 +7,14 @@ A powerful Django-based blog analysis tool that provides actionable insights on 
 ### 🎥 Video Demo
 Watch a quick walkthrough of Boosty in action:
 
-<!-- TODO: Add your demo video here -->
-<!-- Example: [![Boosty Demo](https://img.youtube.com/vi/YOUR_VIDEO_ID/0.jpg)](https://www.youtube.com/watch?v=YOUR_VIDEO_ID) -->
-*Video demonstration coming soon - upload your screen recording to YouTube and replace the link above*
+
+Uploading Screen Recording 2025-11-29 at 07.11.15.mov…
+
 
 ### 📊 Presentation
-View the detailed presentation about Boosty's features and architecture:
+View the detailed presentation about Boosty:
 
-<!-- TODO: Add your PDF presentation here -->
-<!-- 1. Upload your PDF to the /docs folder in this repository -->
-<!-- 2. Link it here: [Boosty Presentation](./docs/Boosty_Presentation.pdf) -->
-*Presentation deck coming soon*
+[Boosty.pdf](https://github.com/user-attachments/files/23832035/Boosty.pdf)
 
 ---
 
@@ -94,10 +91,6 @@ View the detailed presentation about Boosty's features and architecture:
 2. **Get Free Analysis**: View overall score, topic detection, and 3 free recommendations
 3. **Unlock Full Report**: Register to see all premium insights and detailed recommendations
 4. **Share Results**: Use the Share dropdown to export or share on social media
-
-## 📸 Screenshots
-
-*Coming soon - Add screenshots of your application in action*
 
 ## 📁 Project Structure
 
@@ -181,26 +174,13 @@ MIT License - feel free to use this project for personal or commercial purposes.
 
 ## 👤 Author
 
-**Elena Kuprashvili**
 - GitHub: [@EKupra](https://github.com/EKupra)
 - Project Repository: [Boosty](https://github.com/EKupra/boosty)
 
-## 🙏 Acknowledgments
-
-- Inspired by the need for better blog content optimization tools
-- Built with modern web technologies and NLP libraries
-- Special thanks to the open-source community
 
 ---
 
 **Made with ❤️ for bloggers and content creators worldwide**
-
-## 📞 Support
-
-If you encounter any issues or have questions:
-1. Check the [documentation.md](documentation.md)
-2. Search existing [GitHub Issues](https://github.com/EKupra/boosty/issues)
-3. Create a new issue with detailed information
 
 ---
 
