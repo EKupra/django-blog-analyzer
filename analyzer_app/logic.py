@@ -447,8 +447,8 @@ def analyze_page(html: str, url: str = "") -> Dict[str, Any]:
     depth_score = random.randint(70, 95)
     practicality_score = random.randint(75, 95)
 
-    # Recalculate Overall Score with new categories
-    overall_score = int((seo_total + content_total + visual_total + ux_score + engagement_score + topic_fit_score) / 6)
+    # Calculate Overall Score using only FREE categories (stays same for free and premium users)
+    overall_score = int((seo_total + content_total + visual_total) / 3)
 
     return {
         "overall_score": overall_score,
