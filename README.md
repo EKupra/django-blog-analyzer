@@ -2,6 +2,25 @@
 
 A powerful Django-based blog analysis tool that provides actionable insights on SEO, Content Quality, Visual Design, UX, Engagement, and Topic Fit. Perfect for bloggers and content creators who want to optimize their content for better reach and engagement.
 
+## 📺 Demo & Presentation
+
+### 🎥 Video Demo
+Watch a quick walkthrough of Boosty in action:
+
+<!-- TODO: Add your demo video here -->
+<!-- Example: [![Boosty Demo](https://img.youtube.com/vi/YOUR_VIDEO_ID/0.jpg)](https://www.youtube.com/watch?v=YOUR_VIDEO_ID) -->
+*Video demonstration coming soon - upload your screen recording to YouTube and replace the link above*
+
+### 📊 Presentation
+View the detailed presentation about Boosty's features and architecture:
+
+<!-- TODO: Add your PDF presentation here -->
+<!-- 1. Upload your PDF to the /docs folder in this repository -->
+<!-- 2. Link it here: [Boosty Presentation](./docs/Boosty_Presentation.pdf) -->
+*Presentation deck coming soon*
+
+---
+
 ## 🎯 Features
 
 ### Core Analysis
@@ -29,14 +48,14 @@ A powerful Django-based blog analysis tool that provides actionable insights on 
 - **Social Sharing**: Share on X (Twitter), LinkedIn, or email
 - **Export Options**: Print reports or save for later
 
-## 📦 Installation
+## 🚀 Quick Start
 
 ### Prerequisites
 - Python 3.8+
 - pip package manager
 - Virtual environment (recommended)
 
-### Setup Instructions
+### Installation
 
 1. **Clone the repository**:
    ```bash
@@ -69,12 +88,16 @@ A powerful Django-based blog analysis tool that provides actionable insights on 
 6. **Open your browser**:
    Navigate to `http://127.0.0.1:8001`
 
-## 🚀 Usage
+## 💡 Usage
 
 1. **Enter a Blog URL**: Paste any blog post URL (e.g., `https://example.com/my-blog-post`)
 2. **Get Free Analysis**: View overall score, topic detection, and 3 free recommendations
 3. **Unlock Full Report**: Register to see all premium insights and detailed recommendations
 4. **Share Results**: Use the Share dropdown to export or share on social media
+
+## 📸 Screenshots
+
+*Coming soon - Add screenshots of your application in action*
 
 ## 📁 Project Structure
 
@@ -134,17 +157,25 @@ For detailed feature documentation and implementation details, see:
 ## 📊 Benchmarks
 
 Boosty includes benchmark data for 5 topic categories:
-- Travel (walkingtheworld.substack.com)
-- Food (whattocook.substack.com)
-- Sport (billanddougosu.substack.com)
-- Music (honest-broker.com)
-- Literature (alittleblogofbooks.com)
+- **Travel**: [Walking the World](https://walkingtheworld.substack.com/)
+- **Food**: [What to Cook](https://whattocook.substack.com/)
+- **Sport**: [Bill and Doug OSU](https://billanddougosu.substack.com/)
+- **Music**: [Honest Broker](https://www.honest-broker.com/)
+- **Literature**: [A Little Blog of Books](https://alittleblogofbooks.com/)
 
 ## 🤝 Contributing
 
 Contributions are welcome! Please feel free to submit pull requests or open issues for bugs and feature requests.
 
-## 📄 License
+### Development Setup
+
+1. Fork the repository
+2. Create a feature branch (`git checkout -b feature/AmazingFeature`)
+3. Commit your changes (`git commit -m 'Add some AmazingFeature'`)
+4. Push to the branch (`git push origin feature/AmazingFeature`)
+5. Open a Pull Request
+
+## 📝 License
 
 MIT License - feel free to use this project for personal or commercial purposes.
 
@@ -152,7 +183,31 @@ MIT License - feel free to use this project for personal or commercial purposes.
 
 **Elena Kuprashvili**
 - GitHub: [@EKupra](https://github.com/EKupra)
+- Project Repository: [Boosty](https://github.com/EKupra/boosty)
+
+## 🙏 Acknowledgments
+
+- Inspired by the need for better blog content optimization tools
+- Built with modern web technologies and NLP libraries
+- Special thanks to the open-source community
 
 ---
 
-**Made with ❤️ for bloggers and content creators**
+**Made with ❤️ for bloggers and content creators worldwide**
+
+## 📞 Support
+
+If you encounter any issues or have questions:
+1. Check the [documentation.md](documentation.md)
+2. Search existing [GitHub Issues](https://github.com/EKupra/boosty/issues)
+3. Create a new issue with detailed information
+
+---
+
+### 🎯 Roadmap
+
+- [ ] Integration with WordPress and Medium APIs
+- [ ] Advanced AI content suggestions using GPT
+- [ ] Multi-language support
+- [ ] Browser extension for quick analysis
+- [ ] Analytics dashboard for tracking improvements over time
